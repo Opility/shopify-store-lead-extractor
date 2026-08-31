@@ -1,0 +1,16 @@
+# Python & Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment & Storage
+.env
+storage/
+apify_storage/
+
+# Logs & Temporary files
+*.log
+.idea/
+.vscode/
+dist/
+build/
