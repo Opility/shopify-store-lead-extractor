@@ -1,0 +1,10 @@
+{
+  "actorSpecification": 1,
+  "name": "shopify-store-lead-extractor",
+  "title": "⚡ Shopify Store Lead Extractor ✅ Emails, Catalog Size & Apps",
+  "description": "$2.00/1k Leads — Extract verified Shopify Store Leads with contact emails, Instagram/TikTok socials, catalog sizes, and detected apps (Klaviyo, Yotpo, Gorgias, Recharge). Ideal for e-commerce agencies & 3PLs!",
+  "version": "1.0.0",
+  "dockerfile": "./Dockerfile",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json"
+}

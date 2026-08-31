@@ -1,0 +1,45 @@
+{
+  "title": "Shopify Store Lead Extractor Input Schema",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "searchTerms": {
+      "title": "E-Commerce Niche / Keywords",
+      "type": "array",
+      "description": "Niches or store categories to search (e.g., Apparel & Fashion, Beauty & Cosmetics, Fitness & Sports, Jewelry & Accessories).",
+      "editor": "json",
+      "default": [
+        "Apparel & Fashion",
+        "Beauty & Cosmetics",
+        "Fitness & Sports",
+        "Jewelry & Accessories"
+      ]
+    },
+    "maxResults": {
+      "title": "Maximum Stores to Extract",
+      "type": "integer",
+      "description": "Maximum number of Shopify stores to extract.",
+      "minimum": 1,
+      "maximum": 50000,
+      "default": 100
+    },
+    "detectTechStack": {
+      "title": "Detect Installed Apps (Klaviyo, Yotpo, Gorgias)",
+      "type": "boolean",
+      "description": "Detect installed marketing, review, and support apps.",
+      "default": true
+    },
+    "proxyConfiguration": {
+      "title": "Proxy Configuration",
+      "type": "object",
+      "description": "Apify Proxy options to bypass anti-scraping blocks.",
+      "editor": "proxy",
+      "default": {
+        "useApifyProxy": true
+      }
+    }
+  },
+  "required": [
+    "searchTerms"
+  ]
+}
