@@ -59,63 +59,79 @@ App / Technology Detection
 Deduplication
         ↓
 Apify Dataset Output
-What the Actor Does
-🛍️ Shopify Discovery — Finds Shopify stores using configurable search inputs
-📦 Catalog Analysis — Checks Shopify product endpoints where publicly accessible
-🧩 App Fingerprinting — Detects recognizable frontend signals for supported ecommerce tools
-📧 Contact Extraction — Extracts publicly visible business email addresses
-📱 Social Extraction — Finds supported social profile links
-🧹 Deduplication — Filters duplicate store domains
-📊 Structured Output — Saves results to the Apify Dataset
-🏆 Key Features
-Feature	Status	Purpose
-🛍️ Shopify Store Detection	✅ Active	Identify Shopify storefronts
-🔎 Search-Based Discovery	✅ Active	Find stores by niche or keyword
-📦 Catalog Size Signals	✅ Active	Inspect publicly available product endpoints
-📧 Public Email Extraction	✅ Active	Collect publicly exposed business emails
-📱 Social Profile Extraction	✅ Active	Find supported social links
-🧩 Ecommerce App Detection	✅ Active	Detect supported frontend app signals
-🧹 Duplicate Filtering	✅ Active	Reduce duplicate domains
-📊 Apify Dataset Output	✅ Active	Export structured results
-🤖 MCP / API Access	✅ Available	Integrate Actor runs into automation workflows
-🧩 Supported App Detection
+```
+
+### What the Actor Does
+
+- 🛍️ **Shopify Discovery** — Finds Shopify stores using configurable search inputs
+- 📦 **Catalog Analysis** — Checks Shopify product endpoints where publicly accessible
+- 🧩 **App Fingerprinting** — Detects recognizable frontend signals for supported ecommerce tools
+- 📧 **Contact Extraction** — Extracts publicly visible business email addresses
+- 📱 **Social Extraction** — Finds supported social profile links
+- 🧹 **Deduplication** — Filters duplicate store domains
+- 📊 **Structured Output** — Saves results to the Apify Dataset
+
+---
+
+## 🏆 Key Features
+
+| Feature | Status | Purpose |
+|---|---|---|
+| 🛍️ Shopify Store Detection | ✅ Active | Identify Shopify storefronts |
+| 🔎 Search-Based Discovery | ✅ Active | Find stores by niche or keyword |
+| 📦 Catalog Size Signals | ✅ Active | Inspect publicly available product endpoints |
+| 📧 Public Email Extraction | ✅ Active | Collect publicly exposed business emails |
+| 📱 Social Profile Extraction | ✅ Active | Find supported social links |
+| 🧩 Ecommerce App Detection | ✅ Active | Detect supported frontend app signals |
+| 🧹 Duplicate Filtering | ✅ Active | Reduce duplicate domains |
+| 📊 Apify Dataset Output | ✅ Active | Export structured results |
+| 🤖 MCP / API Access | ✅ Available | Integrate Actor runs into automation workflows |
+
+---
+
+## 🧩 Supported App Detection
 
 The Actor currently includes detection patterns for tools such as:
 
-Klaviyo
-Yotpo
-Recharge
-Gorgias
-Loox
-Judge.me
-Zendesk
-Privy
-Smile.io
+- Klaviyo
+- Yotpo
+- Recharge
+- Gorgias
+- Loox
+- Judge.me
+- Zendesk
+- Privy
+- Smile.io
 
-App detection is based on recognizable frontend or page-level signals.
-It should not be treated as a complete inventory of every app installed on a store.
+> App detection is based on recognizable frontend or page-level signals.  
+> It should not be treated as a complete inventory of every app installed on a store.
 
-🛠️ Technology Stack
+---
 
+## 🛠️ Technology Stack
 
+![Python](https://img.shields.io/badge/Python_3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Apify](https://img.shields.io/badge/Apify_SDK-FF6B35?style=for-the-badge)
+![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup4-412991?style=for-the-badge)
+![HTTPX](https://img.shields.io/badge/HTTPX-009688?style=for-the-badge)
 
+| Tool | Role |
+|---|---|
+| **Python 3.11** | Core application language |
+| **Apify SDK** | Actor runtime and Dataset output |
+| **HTTPX** | HTTP requests and website fetching |
+| **BeautifulSoup4** | HTML parsing |
+| **Regex** | Email and signal extraction |
+| **DuckDuckGo Search** | Search-based store discovery |
+| **Apify Dataset** | Structured output storage |
 
+---
 
-
-
-
-Tool	Role
-Python 3.11	Core application language
-Apify SDK	Actor runtime and Dataset output
-HTTPX	HTTP requests and website fetching
-BeautifulSoup4	HTML parsing
-Regex	Email and signal extraction
-DuckDuckGo Search	Search-based store discovery
-Apify Dataset	Structured output storage
-📥 Input Example
+## 📥 Input Example
 
 Example input:
 
+```json
 {
   "searchTerms": [
     "Apparel & Fashion",
@@ -129,7 +145,11 @@ Example input:
     "useApifyProxy": true
   }
 }
-Typical Search Ideas
+```
+
+### Typical Search Ideas
+
+```text
 skincare
 fitness apparel
 coffee
@@ -137,10 +157,15 @@ beauty
 pet products
 home decor
 jewelry
-📤 Structured Output Example
+```
+
+---
+
+## 📤 Structured Output Example
 
 The following is synthetic sample data:
 
+```json
 {
   "storeName": "Luxe Apparel Co.",
   "domain": "luxeapparel.com",
@@ -164,91 +189,107 @@ The following is synthetic sample data:
     "linkedin": null
   }
 }
+```
 
-The example above contains sample data only and does not represent a real customer or store.
+> The example above contains sample data only and does not represent a real customer or store.
 
-📊 Output
+---
+
+## 📊 Output
 
 Results are written to an Apify Dataset and can be exported as:
 
-JSON
-CSV
-Excel
-XML
+- JSON
+- CSV
+- Excel
+- XML
 
 The Dataset can then be used in:
 
-CRM enrichment
-spreadsheets
-lead research workflows
-market analysis
-ecommerce research
-automation pipelines
-🧪 Deployment & Testing
+- CRM enrichment
+- Spreadsheets
+- Lead research workflows
+- Market analysis
+- Ecommerce research
+- Automation pipelines
+
+---
+
+## 🧪 Deployment & Testing
 
 The Actor is deployed publicly on Apify and has been tested through successful Actor runs.
 
 Actual runtime and result count depend on:
 
-input size
-website response times
-publicly available content
-anti-bot protections
-catalog endpoint availability
-external website behavior
+- Input size
+- Website response times
+- Publicly available content
+- Anti-bot protections
+- Catalog endpoint availability
+- External website behavior
 
 No fixed accuracy percentage or runtime is guaranteed.
 
-⚠️ Limitations
+---
+
+## ⚠️ Limitations
 
 Some Shopify stores may:
 
-hide email addresses
-load content dynamically
-restrict automated access
-block product endpoints
-hide social links
-expose limited app fingerprints
+- Hide email addresses
+- Load content dynamically
+- Restrict automated access
+- Block product endpoints
+- Hide social links
+- Expose limited app fingerprints
 
 Because of this, some fields may be empty.
 
-Email Data
+### Email Data
 
 The Actor extracts publicly available email addresses.
 
 It does not guarantee that an email address is:
 
-active
-monitored
-owned by a founder or decision-maker
-suitable for outreach
+- Active
+- Monitored
+- Owned by a founder or decision-maker
+- Suitable for outreach
 
 Users should independently validate contact information before using it.
 
-App Detection
+### App Detection
 
 Detected apps indicate recognizable frontend signals only.
 
 A store may use an application without exposing a detectable frontend identifier.
 
-🔐 Responsible Use
+---
+
+## 🔐 Responsible Use
 
 Use this Actor only for lawful purposes and in accordance with:
 
-applicable privacy laws
-website terms
-marketing regulations
-Apify platform policies
+- Applicable privacy laws
+- Website terms
+- Marketing regulations
+- Apify platform policies
 
 The Actor is intended for research and extraction of publicly accessible business information.
 
-🚀 Live Apify Actor
+---
+
+## 🚀 Live Apify Actor
 
 Run the Actor here:
 
-https://apify.com/opility/shopify-store-lead-extractor-emails-catalog-size-apps
+**https://apify.com/opility/shopify-store-lead-extractor-emails-catalog-size-apps**
 
-📁 Repository Structure
+---
+
+## 📁 Repository Structure
+
+```text
 shopify-store-lead-extractor/
 ├── .actor/
 │   ├── actor.json
@@ -259,47 +300,58 @@ shopify-store-lead-extractor/
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
-💡 Example Use Cases
-Ecommerce Agencies
+```
+
+---
+
+## 💡 Example Use Cases
+
+### Ecommerce Agencies
 
 Find Shopify brands that may need marketing, development, CRO, design, or automation services.
 
-Shopify App Vendors
+### Shopify App Vendors
 
 Research stores that may fit the target audience for an ecommerce application.
 
-Email & SMS Agencies
+### Email & SMS Agencies
 
 Identify stores and inspect detectable marketing-tool signals.
 
-Market Research
+### Market Research
 
 Build structured samples of Shopify stores across specific niches.
 
-Technology Research
+### Technology Research
 
 Analyze publicly detectable ecommerce tools and catalog signals.
 
-B2B Lead Generation
+### B2B Lead Generation
 
 Create structured prospect datasets for downstream qualification workflows.
 
-🏢 Developed & Maintained By
+---
 
-Built by Opility
+## 🏢 Developed & Maintained By
+
+**Built by Opility**
 
 AI Automation • Workflow Automation • Web Data Extraction • No-Code/Low-Code Solutions
 
-🌐 Website: https://opility.com
-🛍️ Apify Store: https://apify.com/opility
-💻 GitHub: https://github.com/Opility
+🌐 **Website:** https://opility.com  
+🛍️ **Apify Store:** https://apify.com/opility  
+💻 **GitHub:** https://github.com/Opility
 
-⭐ Support the Project
+---
+
+## ⭐ Support the Project
 
 If this Actor is useful to you:
 
-⭐ Star the GitHub repository
-⭐ Leave a review on the Apify Store
-🔗 Share the Actor with others working on ecommerce research
+- ⭐ Star the GitHub repository
+- ⭐ Leave a review on the Apify Store
+- 🔗 Share the Actor with others working on ecommerce research
 
-Made with ❤️ by Opility
+---
+
+**Made with ❤️ by Opility**
