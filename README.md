@@ -1,97 +1,121 @@
-# ⚡ Shopify Store Lead Extractor ✅ Emails, Catalog Size & Apps
-
-<div align="center">
+# ⚡ Shopify Store Lead Extractor
 
 [![Apify Actor](https://img.shields.io/badge/Apify-Actor-orange?style=for-the-badge&logo=apify)](https://apify.com/opility/shopify-store-lead-extractor-emails-catalog-size-apps)
-[![Status](https://img.shields.io/badge/Status-Live%20%26%20Monetized-brightgreen?style=for-the-badge&logo=github)](https://apify.com/opility/shopify-store-lead-extractor-emails-catalog-size-apps)
-[![Pricing](https://img.shields.io/badge/Pricing-%242.00%2F1k%20Leads-blueviolet?style=for-the-badge&logo=shopify)](https://apify.com/opility/shopify-store-lead-extractor-emails-catalog-size-apps)
-[![Python](https://img.shields.io/badge/Python-v3.11-3776AB?style=for-the-badge&logo=python)](https://python.org)
-[![MCP](https://img.shields.io/badge/MCP-AI_Agent_Enabled-0A66C2?style=for-the-badge&logo=openai)](https://apify.com/opility/shopify-store-lead-extractor-emails-catalog-size-apps/api/mcp)
+[![Status](https://img.shields.io/badge/Status-Live%20%26%20Deployed-brightgreen?style=for-the-badge)](https://apify.com/opility/shopify-store-lead-extractor-emails-catalog-size-apps)
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python)](https://python.org/)
+[![MCP](https://img.shields.io/badge/MCP-AI%20Agent%20Enabled-0A66C2?style=for-the-badge)](https://apify.com/opility/shopify-store-lead-extractor-emails-catalog-size-apps/api/mcp)
+
+## 🛍️ Shopify Leads, Public Emails, Social Profiles, Catalog Signals & App Detection
+
+A Python-based Apify Actor for discovering Shopify stores and extracting useful publicly available ecommerce intelligence.
+
+The Actor can collect:
+
+- 📧 Public business email addresses
+- 📱 Social profile links
+- 📦 Shopify catalog-size signals
+- 🧩 Detected ecommerce apps
+- 🌐 Store/domain information
+- 📊 Structured Apify Dataset output
+
+Built for ecommerce agencies, Shopify consultants, B2B lead-generation teams, app vendors, and market-research workflows.
 
 ---
-
-### Extract verified Shopify Store leads with contact emails, catalog sizes, and installed tech apps ⚡
-
----
-
-</div>
 
 ## 🎯 The Challenge
 
-> **"Finding high-intent e-commerce stores using specific apps like Klaviyo or Yotpo was taking hours of manual digging..."**
+Finding Shopify stores that match a specific niche or technology profile can require significant manual research.
 
-| Problem | Impact |
-|:---|:---|
-| 🛍️ **Manual Store Hunting** | 4-5 hours/day wasted manually checking websites |
-| 📧 **Missing Founder Emails** | 70% of lead tools only provide generic `@info.com` addresses |
-| 🛠️ **Hidden Tech Stack** | No way to know if stores use Klaviyo, Gorgias, or Recharge |
-| 💰 **Overpriced Databases** | Legacy databases charge $5,000–$15,000/year upfront |
+Typical tasks include:
+
+| Challenge | Manual Process |
+|---|---|
+| 🛍️ Store discovery | Search and inspect stores individually |
+| 📧 Contact research | Look for public business email addresses |
+| 🧩 Tech-stack research | Inspect each site for ecommerce tools |
+| 📦 Catalog research | Estimate product/catalog size manually |
+| 📱 Social research | Find each store's social profiles |
+| 📊 Data organization | Copy information into spreadsheets or CRMs |
 
 ---
 
 ## ✨ The Solution
 
-### Automated E-Commerce Lead Intelligence Engine
+### Automated Shopify Store Intelligence Workflow
 
-🔍 Target Niche In ➔ 🐍 Python Crawlee + Tech Fingerprint ➔ 📊 Verified Leads Out
+```text
+Search / Store Input
+        ↓
+Shopify Store Discovery
+        ↓
+Website Fetch & Analysis
+        ↓
+Public Contact Extraction
+        ↓
+Catalog Signal Analysis
+        ↓
+App / Technology Detection
+        ↓
+Deduplication
+        ↓
+Apify Dataset Output
+What the Actor Does
+🛍️ Shopify Discovery — Finds Shopify stores using configurable search inputs
+📦 Catalog Analysis — Checks Shopify product endpoints where publicly accessible
+🧩 App Fingerprinting — Detects recognizable frontend signals for supported ecommerce tools
+📧 Contact Extraction — Extracts publicly visible business email addresses
+📱 Social Extraction — Finds supported social profile links
+🧹 Deduplication — Filters duplicate store domains
+📊 Structured Output — Saves results to the Apify Dataset
+🏆 Key Features
+Feature	Status	Purpose
+🛍️ Shopify Store Detection	✅ Active	Identify Shopify storefronts
+🔎 Search-Based Discovery	✅ Active	Find stores by niche or keyword
+📦 Catalog Size Signals	✅ Active	Inspect publicly available product endpoints
+📧 Public Email Extraction	✅ Active	Collect publicly exposed business emails
+📱 Social Profile Extraction	✅ Active	Find supported social links
+🧩 Ecommerce App Detection	✅ Active	Detect supported frontend app signals
+🧹 Duplicate Filtering	✅ Active	Reduce duplicate domains
+📊 Apify Dataset Output	✅ Active	Export structured results
+🤖 MCP / API Access	✅ Available	Integrate Actor runs into automation workflows
+🧩 Supported App Detection
 
-**What it does:**
-- 🛍️ **Shopify Discovery** - Scrapes 4.5M+ active Shopify stores by niche or keyword
-- 📦 **Catalog Size Analysis** - Automatically calculates product catalog count (e.g. 50 vs 5,000 products)
-- 🛠️ **Tech Stack Fingerprinting** - Detects installed apps (**Klaviyo, Yotpo, Recharge, Gorgias, Loox, Zendesk, Privy**)
-- 📧 **Deep Contact Extraction** - Extracts verified founder & support emails (`support@`, `info@`, `founders@`)
-- 📱 **Social Media Coordinates** - Scrapes Instagram, TikTok, Facebook, LinkedIn & Twitter/X handles
+The Actor currently includes detection patterns for tools such as:
 
----
+Klaviyo
+Yotpo
+Recharge
+Gorgias
+Loox
+Judge.me
+Zendesk
+Privy
+Smile.io
 
-## 📊 Results That Matter
+App detection is based on recognizable frontend or page-level signals.
+It should not be treated as a complete inventory of every app installed on a store.
 
-| Metric | Manual Sourcing | Opility Extractor | Impact |
-|:---|:---:|:---:|:---:|
-| **Sourcing Speed** | 10 stores/hr | **1,000 stores/min** | **+10,000% ⚡** |
-| **Email Accuracy** | 30% | **95%+ Verified** | **+65% 🎯** |
-| **Tech Stack Detection** | Manual inspection | **100% Automated** | **Instant 🛠️** |
-| **Cost Per 1,000 Leads** | $50+ (Virtual Assistant) | **$2.00 Flat** | **-96% ROI 💰** |
+🛠️ Technology Stack
 
----
 
-## 🏆 Key Features
 
-| Feature | Status | Impact |
-|:---|:---:|:---|
-| 🛍️ **Shopify Store Detection** | ✅ Active | 100% precision filtering |
-| 🛠️ **Klaviyo & App Fingerprinting** | ✅ Active | Know their exact tech stack |
-| 📦 **Product Catalog Counter** | ✅ Active | Target high-volume stores |
-| 📧 **Verified Email Intelligence** | ✅ Active | Reach decision-makers directly |
-| 📱 **Social Coordinates Extraction** | ✅ Active | Multi-channel outreach ready |
-| 🤖 **MCP & AI Agent API** | ✅ Active | Run via Claude, Cursor, or ChatGPT |
 
----
 
-## 🛠️ Technology Stack
 
-<div align="center">
 
-![Python](https://img.shields.io/badge/-Python_3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Apify SDK](https://img.shields.io/badge/-Apify_SDK-FF6B35?style=for-the-badge&logo=apify&logoColor=white)
-![Crawlee](https://img.shields.io/badge/-Crawlee-0969DA?style=for-the-badge&logo=crawlee&logoColor=white)
-![BeautifulSoup](https://img.shields.io/badge/-BeautifulSoup4-412991?style=for-the-badge&logo=python&logoColor=white)
-![HTTPX](https://img.shields.io/badge/-HTTPX_Async-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 
-</div>
+Tool	Role
+Python 3.11	Core application language
+Apify SDK	Actor runtime and Dataset output
+HTTPX	HTTP requests and website fetching
+BeautifulSoup4	HTML parsing
+Regex	Email and signal extraction
+DuckDuckGo Search	Search-based store discovery
+Apify Dataset	Structured output storage
+📥 Input Example
 
-| Tool | Role | Why |
-|:---|:---|:---|
-| **Apify SDK** | Cloud Serverless Host | Runs proxy rotation, dataset storage & MCP endpoints |
-| **Crawlee + HTTPX** | High-Speed Async Engine | Crawls 1,000s of domains concurrently in seconds |
-| **BeautifulSoup4** | HTML Parser | Parses meta tags, app scripts, & contact pages |
-| **Regex Intelligence** | Pattern Recognition | Extracts clean emails & handles email extension filtering |
+Example input:
 
----
-
-## 📥 Input Configuration Example
-
-```json
 {
   "searchTerms": [
     "Apparel & Fashion",
@@ -105,13 +129,18 @@
     "useApifyProxy": true
   }
 }
-```
+Typical Search Ideas
+skincare
+fitness apparel
+coffee
+beauty
+pet products
+home decor
+jewelry
+📤 Structured Output Example
 
----
+The following is synthetic sample data:
 
-## 📤 Structured JSON Output Sample
-
-```json
 {
   "storeName": "Luxe Apparel Co.",
   "domain": "luxeapparel.com",
@@ -126,24 +155,100 @@
   ],
   "email": "contact@luxeapparel.com",
   "allEmails": [
-    "contact@luxeapparel.com",
-    "founders@luxeapparel.com"
+    "contact@luxeapparel.com"
   ],
   "socialLinks": {
     "instagram": "https://instagram.com/luxeapparel",
     "facebook": "https://facebook.com/luxeapparel",
     "tiktok": "https://tiktok.com/@luxeapparel",
     "linkedin": null
-  },
-  "source": "Opility Shopify Engine"
+  }
 }
-```
 
----
+The example above contains sample data only and does not represent a real customer or store.
 
-## 📁 Repository Structure
+📊 Output
 
-```text
+Results are written to an Apify Dataset and can be exported as:
+
+JSON
+CSV
+Excel
+XML
+
+The Dataset can then be used in:
+
+CRM enrichment
+spreadsheets
+lead research workflows
+market analysis
+ecommerce research
+automation pipelines
+🧪 Deployment & Testing
+
+The Actor is deployed publicly on Apify and has been tested through successful Actor runs.
+
+Actual runtime and result count depend on:
+
+input size
+website response times
+publicly available content
+anti-bot protections
+catalog endpoint availability
+external website behavior
+
+No fixed accuracy percentage or runtime is guaranteed.
+
+⚠️ Limitations
+
+Some Shopify stores may:
+
+hide email addresses
+load content dynamically
+restrict automated access
+block product endpoints
+hide social links
+expose limited app fingerprints
+
+Because of this, some fields may be empty.
+
+Email Data
+
+The Actor extracts publicly available email addresses.
+
+It does not guarantee that an email address is:
+
+active
+monitored
+owned by a founder or decision-maker
+suitable for outreach
+
+Users should independently validate contact information before using it.
+
+App Detection
+
+Detected apps indicate recognizable frontend signals only.
+
+A store may use an application without exposing a detectable frontend identifier.
+
+🔐 Responsible Use
+
+Use this Actor only for lawful purposes and in accordance with:
+
+applicable privacy laws
+website terms
+marketing regulations
+Apify platform policies
+
+The Actor is intended for research and extraction of publicly accessible business information.
+
+🚀 Live Apify Actor
+
+Run the Actor here:
+
+https://apify.com/opility/shopify-store-lead-extractor-emails-catalog-size-apps
+
+📁 Repository Structure
 shopify-store-lead-extractor/
 ├── .actor/
 │   ├── actor.json
@@ -154,28 +259,47 @@ shopify-store-lead-extractor/
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
-```
+💡 Example Use Cases
+Ecommerce Agencies
 
----
+Find Shopify brands that may need marketing, development, CRO, design, or automation services.
 
-## 🏢 Developed & Maintained By
+Shopify App Vendors
 
-<div align="center">
+Research stores that may fit the target audience for an ecommerce application.
 
-**Built by Opility** 👨‍💻  
-*Empowering Businesses with B2B Lead Automation & Micro-SaaS Engines.*
+Email & SMS Agencies
 
-[![Website](https://img.shields.io/badge/Website-opility.com-0052CC?style=for-the-badge&logo=google-chrome)](https://opility.com)
-[![Apify Store](https://img.shields.io/badge/Apify_Store-Opility-FF6B35?style=for-the-badge&logo=apify)](https://apify.com/opility)
-[![GitHub](https://img.shields.io/badge/GitHub-Opility-181717?style=for-the-badge&logo=github)](https://github.com/Opility)
+Identify stores and inspect detectable marketing-tool signals.
 
-</div>
+Market Research
 
----
+Build structured samples of Shopify stores across specific niches.
 
-<div align="center">
+Technology Research
 
-### ⭐ If this project helped you, please star it on GitHub & leave a 5-star review on Apify!
-**Made with ❤️ by Opility**
+Analyze publicly detectable ecommerce tools and catalog signals.
 
-</div>
+B2B Lead Generation
+
+Create structured prospect datasets for downstream qualification workflows.
+
+🏢 Developed & Maintained By
+
+Built by Opility
+
+AI Automation • Workflow Automation • Web Data Extraction • No-Code/Low-Code Solutions
+
+🌐 Website: https://opility.com
+🛍️ Apify Store: https://apify.com/opility
+💻 GitHub: https://github.com/Opility
+
+⭐ Support the Project
+
+If this Actor is useful to you:
+
+⭐ Star the GitHub repository
+⭐ Leave a review on the Apify Store
+🔗 Share the Actor with others working on ecommerce research
+
+Made with ❤️ by Opility
